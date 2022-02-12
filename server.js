@@ -1,8 +1,8 @@
-const express = require("express");
-const app = express();
-
 const postsController = require("./src/Controllers/Posts-controller");
 const usersController = require("./src/Controllers/Users-controller");
+
+const express = require("express");
+const app = express();
 
 // PostID ile istenen VERİ getirilecek
 app.get("/posts/:postID", (req, res) => {
