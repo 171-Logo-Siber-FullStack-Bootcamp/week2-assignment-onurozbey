@@ -4,7 +4,7 @@ const usersController = require("./src/Controllers/Users-controller");
 const express = require("express");
 const app = express();
 
-// PostID ile istenen VERİ getirilecek
+// PostID ile istenen posts VERİSİ getirilecek
 app.get("/posts/:postID", (req, res) => {
   var post = postsController.getPostByID(req.params.postID);
   res.send(post);
@@ -15,7 +15,7 @@ app.get("/posts", (req, res) => {
   res.send(posts);
 });
 
-// UserID ile belirlenen VERİ getirilecek
+// UserID ile belirlenen users VERİSİ getirilecek
 app.get("/users/:userID", (req, res) => {
   var user = usersController.getUserByID(req.params.userID);
   res.send(user);
